@@ -3,12 +3,12 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: [
-    './index'
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
   plugins: [
     new webpack.DefinePlugin({

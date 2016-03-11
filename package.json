@@ -10,11 +10,13 @@
   },
   "license": "MIT",
   "dependencies": {
+    "i": "^0.3.4",
     "lodash": "^4.5.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
-    "redux": "^3.3.1"
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1"
   },
   "repository": "thorsteinson/courseforge",
   "devDependencies": {

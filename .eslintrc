@@ -4,6 +4,9 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "PRODUCTION": true
+  },
   "rules": {
     "valid-jsdoc": 2,
     "react/jsx-uses-react": 2,
