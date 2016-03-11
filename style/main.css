@@ -6,3 +6,41 @@ button {
 	transition: background-color 0.2s ease;
 	transition: border-color 0.1s ease;
 }
+
+.big-text {
+	font-size: 2.0rem;
+}
+
+.warning {
+	background-color: #c30000;
+	border-color: #330000;
+	color: #FFF;
+}
+
+.warning:hover, .warning:focus {
+	background-color: #b30000;
+	color: #FFF;
+	border-color: #EEE;
+}
+
+.commit {
+	/*background-color: #F0F0F0;*/
+	margin-bottom: 20px;
+	padding: 5px;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.commit h4 {
+	font-size: 2.0rem;
+}
+
+.commit h3 {
+	font-size: 2.5rem;
+}
+
+.file {
+	background-color: #F3F3F3;
+	margin: 15px;
+	padding-left: 20px;
+	border-radius: 5px;
+}
