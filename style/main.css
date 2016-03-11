@@ -1,0 +1,8 @@
+p, input, button, label, form, table {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+button {
+	transition: background-color 0.2s ease;
+	transition: border-color 0.1s ease;
+}
