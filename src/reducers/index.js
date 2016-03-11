@@ -5,6 +5,10 @@ import {
   LOGIN_REQUEST_START, LOGIN_REQUEST_FAIL, LOGIN_REQUEST_SUCCESS
 } from '../constants/action-types'
 
+import {
+  PROFILE_REQ_START, PROFILE_REQ_FAIL, PROFILE_REQ_SUCCESS
+} from '../constants/action-types'
+
 const initialAuthState = {
   isFetching: false,
   isAuthenticated: false,
@@ -37,8 +41,38 @@ function authentication (state = initialAuthState, action) {
   }
 }
 
+const initProfileState = {
+  isFetching: false,
+  profile: {},
+  failed: false
+}
+
+function profile (state = initProfileState, action) {
+  switch (action.type) {
+    case PROFILE_REQ_START:
+      return _.assign({}, state, {
+        isFetching: true,
+        failed: false // Reset failure status
+      })
+    case PROFILE_REQ_SUCCESS:
+      return _.assign({}, state, {
+        isFetching: false,
+        profile: action.profile
+      })
+    case PROFILE_REQ_FAIL:
+      return _.assign({}, state, {
+        isFetching: false,
+        failed: true // Inform components that something has gone wrong
+      })
+
+    default:
+      return state
+  }
+}
+
 const rootReducer = combineReducers({
-  authentication
+  authentication,
+  profile
 })
 
 export default rootReducer

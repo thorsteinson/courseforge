@@ -1,17 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as Actions from '../actions/login-actions'
-import LoginScreen from '../components/login-screen'
+import * as Actions from '../actions/profile-actions'
+import ProfileScreen from '../components/profile-screen'
 
 class App extends Component {
   render () {
     const { state, actions } = this.props
-    const authState = state.authentication
     return (
       <div>
-        <LoginScreen {...state.authentication}
-          actions={actions} />
+        <ProfileScreen {...state.profile}
+          getProfile={actions.getProfile} />
       </div>
     )
   }
