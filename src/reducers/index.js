@@ -8,7 +8,7 @@ import {
 const initialAuthState = {
   isFetching: false,
   isAuthenticated: false,
-  credenentials: {}
+  credentials: {}
 }
 
 function authentication (state = initialAuthState, action) {

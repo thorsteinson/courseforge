@@ -13,6 +13,7 @@ export function makeRequest () {
 export function success () {
   return {
     type: types.LOGIN_REQUEST_SUCCESS
+    // TODO, get credentials back to the user
   }
 }
 
@@ -49,7 +50,7 @@ export function authenticate () {
         // Now update the state of the application with the success notification
         dispatch(success())
       ).catch((err) => {
-        // Now update the state of teh app with a failure notification
+        // Now update the state of the app with a failure notification
         dispatch(fail(err.details))
       })
   }
